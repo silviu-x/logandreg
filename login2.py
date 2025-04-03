@@ -9,6 +9,10 @@ def register():
         return
     
     password = input("Scegli una password: ")
+    password2 = input("Conferma la password: ")
+    if password2 != password:
+        print("Le password non coincidono!")
+        return
     users[username] = {"password": password, "attempts": 0}
     print("Registrazione completata!")
 
